@@ -1,8 +1,8 @@
 # config/initializers/omniauth.rb
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :google_oauth2,
-           ENV.fetch("GOOGLE_CLIENT_ID"),
-           ENV.fetch("GOOGLE_CLIENT_SECRET"),
+           "557044989759-8n3c60sotuhpmlafl5sql38sef1h6or8.apps.googleusercontent.com",
+           "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",
            scope: "email,profile",
            prompt: "select_account",
            access_type: "offline"
