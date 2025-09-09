@@ -43,11 +43,11 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem "mysql2", "~> 0.5"
 # Gemfile
 gem "omniauth-google-oauth2"
 # optional but recommended for CSRF protection with OmniAuth 2.0
 gem "omniauth-rails_csrf_protection"
+gem "pg", ">= 1.1"
 
 
 group :development, :test do
