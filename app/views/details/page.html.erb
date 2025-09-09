@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Coupa</title>
+  <style>
+    :root{
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --accent:#0f172a;
+      --muted:#6b7280;
+      --primary:#2563eb;
+    }
+
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#f8fafc 0%, #eef2f7 100%);
+      color:var(--accent);
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:48px 16px;
+    }
+
+    .container{
+      max-width:900px;
+      width:100%;
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(12,18,30,0.08);
+      padding:40px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* Top-right button */
+    .top-action {
+      position: absolute;
+      top:16px;
+      right:16px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .btn {
+      background:var(--primary);
+      color:#fff;
+      border:0;
+      padding:10px 14px;
+      border-radius:8px;
+      font-weight:600;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      box-shadow:0 4px 12px rgba(37,99,235,0.18);
+    }
+    .btn.secondary {
+      background:transparent;
+      color:var(--accent);
+      border:1px solid #e6eefc;
+      box-shadow:none;
+      font-weight:600;
+    }
+
+    header h1{
+      margin:0 0 8px 0;
+      font-size:1.6rem;
+      letter-spacing:-0.01em;
+    }
+
+    header p.lead{
+      margin:0 0 20px 0;
+      color:var(--muted);
+    }
+
+    .content {
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:28px;
+    }
+
+    .card {
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      border-radius:10px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(12,18,30,0.04);
+      border:1px solid #f1f7ff;
+    }
+
+    .features li { margin-bottom:10px; color:var(--muted); }
+
+    @media (max-width:840px){
+      .content{ grid-template-columns: 1fr; }
+      .top-action { position: static; margin-bottom:16px; }
+      .container{ padding:24px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="page-title">
+    <div class="top-action" aria-hidden="false">
+      <!-- Top-right button — change href or add onclick as needed -->
+      <a class="btn" href="/logout">Log out</a>
+    </div>
+
+    <header>
+      <h1 id="page-title">About Coupa</h1>
+      <p class="lead">Coupa is a cloud-based spend management platform that helps organizations control costs, streamline procurement, and get visibility into company-wide spending.</p>
+    </header>
+
+    <section class="content" aria-label="About Coupa details">
+      <article>
+        <div class="card">
+          <h2>What Coupa does</h2>
+          <p style="color:var(--muted);line-height:1.5rem;">
+            Coupa provides software for procurement, invoicing, expense management, and supplier collaboration.
+            It centralizes purchasing workflows so companies can enforce policies, reduce maverick spend, and drive cost savings across their organization.
+          </p>
+
+          <h3 style="margin-top:14px;">Key benefits</h3>
+          <ul class="features" style="padding-left:1.15rem;">
+            <li>Visibility into spend and supplier performance</li>
+            <li>Automated procurement & approvals</li>
+            <li>Better policy compliance and cost control</li>
+            <li>Supplier and invoice automation</li>
+          </ul>
+
+          <p style="margin-top:14px;color:var(--muted);">This page is a quick summary — link to product pages or your internal documentation for deeper details.</p>
+        </div>
+
+        <div style="margin-top:18px;">
+          <a class="btn" href="https://www.coupa.com" target="_blank" rel="noopener">Visit Coupa.com</a>
+        </div>
+      </article>
+
+      <aside class="card" aria-label="Quick facts">
+        <h3>Quick facts</h3>
+        <dl style="color:var(--muted);line-height:1.6;">
+          <dt style="font-weight:700;">Category</dt><dd>Cloud spend management</dd>
+          <dt style="font-weight:700;">Use cases</dt><dd>Procurement, Invoicing, Expense, Supplier Management</dd>
+          <dt style="font-weight:700;">Best for</dt><dd>Companies looking to centralize spend and improve compliance</dd>
+        </dl>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
