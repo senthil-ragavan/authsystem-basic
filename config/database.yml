@@ -11,13 +11,6 @@ development:
 test:
   <<: *default
   database: myapp_test
-  cable:
-    <<: *default
-    database: myapp_test
 
 production:
   <<: *default
-  cable:
-    <<: *default
-  queue:
-    <<: *default
