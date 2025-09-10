@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get "about", to: "details#page", as: :root
   get "logout", to: "details#logout", as: :logout
 
+  get "/signup", to: "users#new", as: :signup
+  post "user/save", to: "users#save", as: :users
 
   post  "/auth/:provider",          to: "sessions#passthru"  # optional; OmniAuth middleware handles /auth/:provider
   get   "/auth/:provider/callback", to: "authentication#omniauth"

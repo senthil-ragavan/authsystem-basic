@@ -40,14 +40,21 @@
     <hr style="flex:1;border:none;border-top:1px solid #eee;">
   </div>
 
-  <%= button_to "/auth/google_oauth2",
-      method: :post,
-      form: { data: { turbo: false } },
-      class: "google-btn" do %>
-        <!-- svg logo -->
-        <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"> ... </svg>
-        <span>Sign in with Google</span>
+  <div class="auth-buttons" style="display: flex; gap: 10px;">
+    <%= button_to "/auth/google_oauth2",
+        method: :post,
+        form: { data: { turbo: false } },
+        class: "google-btn" do %>
+            <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"> ... </svg>
+            <span>Sign in with Google</span>
     <% end %>
+
+    <%= button_to signup_path,
+        method: :get,
+        class: "signup-btn" do %>
+            <span>Sign Up</span>
+    <% end %>
+  </div>
 
 
   <p style="margin-top:.75rem;font-size:.85rem;color:#666;">
