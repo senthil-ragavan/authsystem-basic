@@ -48,6 +48,7 @@ gem "omniauth-google-oauth2"
 # optional but recommended for CSRF protection with OmniAuth 2.0
 gem "omniauth-rails_csrf_protection"
 gem "pg", ">= 1.1"
+gem "redis", "~> 5.0"
 
 
 group :development, :test do
